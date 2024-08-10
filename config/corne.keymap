@@ -26,9 +26,8 @@
         };
 
         bluetooth {
-            bindings = <&mo 4>;
+            bindings = <&mo 0>;
             key-positions = <36 37 40 41>;
-            layers = <4>;
         };
     };
 
@@ -97,22 +96,13 @@
 
         shortcuts {
             bindings = <
-&kp LC(TAB)     &kp LS(LC(TAB))  &kp LG(W)  &none      &none      &kp LG(T)    &kp F13               &kp F14  &kp F15  &none  &COM_PASS  &kp C_MUTE
-&none           &none            &kp LG(S)  &none      &none      &none        &none                 &none    &none    &none  &none      &none
-&kp LEFT_SHIFT  &none            &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LS(LG(NUMBER_4))  &none    &none    &none  &none      &none
+&kp LC(TAB)     &kp LS(LC(TAB))  &kp LG(W)  &none      &none      &kp LG(T)    &kp F13               &kp F14  &kp F15     &none       &COM_PASS   &kp C_MUTE
+&none           &none            &kp LG(S)  &none      &none      &none        &none                 &none    &bt BT_PRV  &bt BT_NXT  &bt BT_CLR  &none
+&kp LEFT_SHIFT  &none            &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LS(LG(NUMBER_4))  &none    &none       &none       &none       &out OUT_TOG
                                             &none      &none      &none        &none                 &none    &none
             >;
 
             label = "shortcuts";
-        };
-
-        bluetooth {
-            bindings = <
-&none  &none  &none  &none  &none  &none    &none       &none         &none         &none         &none         &out OUT_TOG
-&none  &none  &none  &none  &none  &none    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none  &none  &none  &none  &none  &none    &none       &none         &none         &bt BT_PRV    &bt BT_NXT    &none
-                     &none  &none  &none    &none       &none         &none
-            >;
         };
     };
 };
